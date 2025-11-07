@@ -1,10 +1,10 @@
-from app import create_app, db
-from models import Stay
+from app import create_app
+from models import db, Stay
 
 app = create_app()
 
 stays_data = [
-    {
+      {
         "name": "The Norfolk Hotel",
         "type": "hotel",
         "price": 13000,
@@ -53,7 +53,7 @@ stays_data = [
         "type": "hotel",
         "price": 13500,
         "rating": 4.7,
-        "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
         "location": "Central Nairobi",
         "description": "Award-winning hotel with elegant rooms and dining.",
         "amenities": ["WiFi", "Pool", "Spa", "Restaurant"],
@@ -67,7 +67,7 @@ stays_data = [
         "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=85&w=800",
         "location": "Westlands",
         "description": "Luxurious 5-star hotel with rooftop pool and spa.",
-        "amenities": ["WiFi", "Pool", "Bar"],
+        "amenities": ["WiFi", "Pool","Bar"],
         "specialOffer": True,
     },
     {
@@ -75,7 +75,7 @@ stays_data = [
         "type": "hotel",
         "price": 12500,
         "rating": 4.5,
-        "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=1170",
+        "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1170",
         "location": "Westlands",
         "description": "Luxurious 5-star hotel with rooftop pool and spa.",
         "amenities": ["WiFi", "Pool", "Parking", "Bar"],
@@ -86,9 +86,9 @@ stays_data = [
         "type": "hotel",
         "price": 14500,
         "rating": 4.8,
-        "image": "https://images.unsplash.com/photo-1687960116497-0dc41e1808a2?auto=format&fit=crop&q=80&w=1171",
+        "image": "https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1171",
         "location": "Westlands",
-        "description": "Modern hotel near Nairobi airport with great amenities.",
+        "description": "Luxurious 5-star hotel with rooftop pool and spa.",
         "amenities": ["WiFi", "Pool", "Gym", "Bar"],
         "specialOffer": True,
     },
@@ -97,9 +97,9 @@ stays_data = [
         "type": "hotel",
         "price": 15500,
         "rating": 4.9,
-        "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
         "location": "Westlands",
-        "description": "Luxurious 5-star serviced apartments with rooftop pool and spa.",
+        "description": "Luxurious 5-star hotel with rooftop pool and spa.",
         "amenities": ["WiFi", "Pool", "Gym", "Bar"],
         "specialOffer": True,
     },
@@ -108,6 +108,7 @@ stays_data = [
 with app.app_context():
     db.drop_all()
     db.create_all()
+
     for data in stays_data:
         stay = Stay(
             name=data["name"],
@@ -121,6 +122,7 @@ with app.app_context():
             specialOffer=data["specialOffer"],
         )
         db.session.add(stay)
-    db.session.commit()
 
-    print("✅ Seeded stays successfully!")
+    db.session.commit()
+    print("✅ Seeded all stays successfully!")
+
