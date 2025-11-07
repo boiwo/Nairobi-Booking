@@ -1,63 +1,62 @@
-# African Championship 🏆
+# Nairobi Booking (Full-Stack Project)
 
-## 📌 Project Overview
-The **African Championship** project is a [describe the project here – e.g., "sports tournament management and live results platform for African championships"].  
-It allows users to [list main purpose – e.g., "view match fixtures, follow team standings, and track championship results in real-time"].
+This is a **full-stack booking application** built with a **React + TypeScript frontend** and a **Python Flask backend**.  
+It allows users to browse and book stays, cars, airport taxis, and attractions in Nairobi.
 
----
+## Project Structure
 
-## 🚀 Technology Stack
-- **Frontend:** React + TypeScript + Vite
-- **Styling:** TailwindCSS
-- **Backend:** [Node.js / Express / Django / etc. – update if applicable]
-- **Database:** [MongoDB / PostgreSQL / Firebase / etc.]
-- **Other tools:** [Axios, Redux, etc.]
+project-root/
+├─ frontend/ # React + TypeScript
+├─ backend/ # Python Flask
+├─ README.md
+└─ .gitignore
 
----
 
-## ✨ Features
-- 📅 View match schedules
-- 🏟️ Browse stadiums and venues
-- 📊 Track live scores and statistics
-- 🧾 Ticket booking and management
-- 🔐 Admin dashboard for managing teams and matches
+## Features
 
----
+- Full-stack architecture (frontend + backend)
+- User authentication and protected routes
+- Browse and book stays, cars, airport taxis, and attractions
+- Shopping cart functionality for multiple bookings
+- Responsive and modern UI using Tailwind CSS
+- REST API endpoints in Flask backend
 
-## 🛠️ Setup Instructions
+## Getting Started
 
-### 1. Clone the repository
+### Prerequisites
+
+- Node.js & npm (for frontend)
+- Python 3.x (for backend)
+- Virtual environment recommended for Python backend
+
+### Running the Backend
+
 ```bash
-git clone https://github.com/your-username/african-championship.git
-cd african-championship
-2. Install dependencies
+cd backend
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
 
+Running the Frontend
+cd frontend
 npm install
-
-3. Run the development server
-
 npm run dev
-The app will be available at http://localhost:5173/.
+The frontend will run on http://localhost:5173 by default.
 
-📂 Project Structure
+.gitignore
 
-african-championship/
-│── public/          # Static assets
-│── src/
-│   ├── components/  # Reusable UI components
-│   ├── pages/       # Application pages
-│   ├── assets/      # Images, icons, etc.
-│   ├── hooks/       # Custom React hooks
-│   └── App.tsx      # Main app component
-│── package.json
-│── vite.config.ts
-│── README.md
-⚙️ Environment Variables
-Create a .env file in the root directory and add the following (if needed):
+node_modules/, dist/ (frontend)
 
+__pycache__/, .db (backend)
 
-VITE_API_URL=your_api_url_here
-DB_URL=your_database_url_here
-📜 License
-This project is licensed under the MIT License – see the LICENSE file for details.
+.env files
+
+Contributing
+
+Contributions are welcome! Feel free to open issues or pull requests.
+
+License
+
+MIT License
 
