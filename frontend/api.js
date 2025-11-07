@@ -1,6 +1,6 @@
 // src/api.js
 
-export const API_BASE = "https://nairobi-booking-1.onrender.com/api";
+export const API_BASE = "https://nairobi-booking-1.onrender.com/api/stays";
 
 export const getStays = async () => {
   const response = await fetch(`${API_BASE}/stays`);
